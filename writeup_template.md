@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/solidWhiteCurve.jpg "Grayscale"
 
 ---
 
@@ -23,11 +23,11 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 6 steps. First, I converted the images to grayscale, then I remove the noise. Next, I apply canny to find the 
+My pipeline consist of 6 steps. First, I convert the images to grayscale, then I remove the noise. Next, I apply canny to find the 
 edges, then I keep only the region of interest. After that, I apply hough line transform to find lines, then I combine the lines with the origin image.
 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function. First, separating line segments by their slope, then add the right line segments coordinate into right_lane_x , right_lane_y and left line segments coordinate into left_lane_x, left_lane_y.Next, find the equation of line of best fit for the points in the left_lane_x , left_lane_y list, and same for the right lane. Then, draw a single line on the left and right lanes according to the equation find previously.
+In order to draw a single line on the left and right lanes, I modify the draw_lines() function. First, separating line segments by their slope, then add the right line segments coordinate into right_lane_x , right_lane_y and left line segments coordinate into left_lane_x, left_lane_y.Next, find the equation of line of best fit for the points in the left_lane_x , left_lane_y list, and same for the right lane. Then, draw a single line on the left and right lanes according to the equation find previously.
 
 
 Result image:
